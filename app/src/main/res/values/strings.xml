@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">calc_matrizes</string>
+    <string name="instrucoes1">Separe os elementos na mesma linha com um espaço, e separe as Linhas com enter/return. Coloque a primeira matriz à esquerda.</string>
+
+    <!-- Tipos de Operação -->
+    <string name="operacao_sobre_matriz">Operações sobre toda a matriz</string>
+    <string name="operacao_sobre_linha">Operações de linha(s)</string>
+    <string name="operacao_sobre_coluna">Operações de coluna(s)</string>
+    
+    <!-- Títulos de campos -->
+    <string name="calculadora_de_matrizes">Calculadora de matrizes</string>
+    <string name="digite_primeira_matriz">Digite a primeira matriz.</string>
+    <string name="trocar_ordem">Trocar a ordem das matrizes.</string>
+    <string name="digite_segunda_matriz">Digite a segunda matriz ou o número real.</string>
+    <string name="qual_tipo_operacao">A que se aplica a operação?</string>
+    <string name="qual_operacao_spinner">Qual é a operação?</string>
+    <string name="calcular">Calcular</string>
+    <string name="num_coluna_operacao">Nº da linha ou coluna que vai participar da operação:</string>
+    <string name="num_coluna_substituida">Nº da linha/coluna a ser substituída:</string>
+    
+    <!-- Operações sobre matrizes -->
+    <string name="soma_matrizes">Soma entre Matrizes</string>
+    <string name="multiplicacao_matrizes">Multiplicação entre matrizes</string>
+    <string name="soma_numero_real">Soma a Número Real</string>
+    <string name="multiplicacao_numero_real">Multiplicação por número Real</string>
+    <string name="calcular_determinante">Calcular Determinante</string>
+    <string name="identificar_inversa">Identificar Matriz inversa</string>
+    
+    <!-- Operações de linha/coluna -->
+    <string name="soma">Soma</string>
+    <string name="multiplicacao">Multiplicação</string>
+    <string name="divisao">Divisão</string>
+
+    <!-- Opções de substituição de linha/coluna -->
+    <string name="apenas_substituir_resultado">Apenas substituir (descarta o valor anterior).</string>
+    <string name="dividir_pelo_resultado">Dividir pelo resultado da operação.</string>
+    <string name="multiplicar_pelo_resultado">Multiplicar pelo resultado da operação.</string>
+    <string name="somar_ao_resultado">Somar ao resultado da operação.</string>
+    <string name="metodo_substituicao_texto">O que acontece com os elementos na linha/coluna a ser substituida?</string>
+
+    <!-- Resultado -->
+    <string name="resultados_string">Resultados: </string>
+
+</resources>
