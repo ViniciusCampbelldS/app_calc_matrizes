@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tituloInstrucoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/instrucoes_entrada"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/matriz1_entrada"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/matriz_1"
+            app:layout_constraintWidth_max="488dp"
+            app:layout_constraintEnd_toStartOf="@+id/matriz2_entrada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloInstrucoes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textColorHint="#888888"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/matriz2_entrada"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/matriz_2"
+            app:layout_constraintWidth_max="488dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/matriz1_entrada"
+            app:layout_constraintTop_toBottomOf="@+id/tituloInstrucoes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textColorHint="#888888"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tituloSelecioneOperacao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/qual_linha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matriz1_entrada" />
+
+        <Spinner
+            android:id="@+id/selecioneOperacao1"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:entries="@array/tipo_de_operacao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloSelecioneOperacao1" />
+
+        <TextView
+            android:id="@+id/tituloSelecioneOperacao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/selecione_operacao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selecioneOperacao1" />
+
+        <Spinner
+            android:id="@+id/selecioneOperacao2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:entries="@array/operacoes_matriz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloSelecioneOperacao2" />
+
+        <Spinner
+            android:id="@+id/selecioneOperacao3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:entries="@array/operacoes_linha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloSelecioneOperacao2" />
+
+        <TextView
+            android:id="@+id/titulo_numero_linha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/numero_da_linha"
+            app:layout_constraintEnd_toEndOf="@+id/numero_linha_entrada"
+            app:layout_constraintStart_toStartOf="@+id/numero_linha_entrada"
+            app:layout_constraintTop_toBottomOf="@+id/selecioneOperacao2" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numero_linha_entrada"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/numero_da_linha"
+            app:layout_constraintWidth_max="488dp"
+            app:layout_constraintEnd_toStartOf="@+id/numero_linha_substituida_entrada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_numero_linha">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="number"
+                android:textColorHint="#888888"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/titulo_numero_linha_substituida"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/linha_a_ser_substituida"
+            app:layout_constraintEnd_toEndOf="@+id/numero_linha_substituida_entrada"
+            app:layout_constraintStart_toStartOf="@+id/numero_linha_substituida_entrada"
+            app:layout_constraintTop_toBottomOf="@+id/selecioneOperacao2"
+            tools:ignore="TextSizeCheck" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numero_linha_substituida_entrada"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_numero_linha_substituida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="@string/linha_a_ser_substituida"
+            app:layout_constraintWidth_max="488dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/numero_linha_entrada"
+            app:layout_constraintTop_toTopOf="@+id/numero_linha_entrada">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="number"
+                android:textColorHint="#888888"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/resultado_saida"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/resultado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numero_linha_entrada">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textColorHint="#888888"
+                android:textIsSelectable="true"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grupo_operacoes_linha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="titulo_numero_linha,numero_linha_entrada,titulo_numero_linha_substituida,numero_linha_substituida_entrada" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
